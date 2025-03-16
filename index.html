@@ -19,7 +19,7 @@
                 center: location 
             });
 
-            // Create a marker at the specified location
+            //  location
             var marker = new google.maps.Marker({
                 position: location, 
                 map: map
@@ -45,8 +45,8 @@
 
     
 
-    function changeLanguage(lang) {
-    document.querySelectorAll("[data-en]").forEach(el => {
+     function changeLanguage(lang) {
+     document.querySelectorAll("[data-en]").forEach(el => {
         const text = el.getAttribute(lang === 'bn' ? "data-bn" : "data-en");
         if (text) el.textContent = text; 
     });
@@ -80,7 +80,7 @@
     </style>
 </head>
 <body>
-    <header class="bg-primary text-white text-center py-3">
+    <header class="bg-info text-white text-center py-3">
         <img src="logo.JPG" alt="BD Job Portal Logo" style="height: 50px;">
         <h1 data-en="Welcome to BD Job Portal" data-bn="বিডি জব পোর্টালে স্বাগতম">Welcome to BD Job portocol</h1>
     </header>
