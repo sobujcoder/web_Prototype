@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BD Job Portal</title>
+    <link rel="icon" type="image/x-icon" href="talent-search.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script>
+         function initMap() {
+            // Coordinates for Dhaka
+            var location = { lat: 23.8103, lng: 90.4125 };
+            
+            // Create a map object
+            var map = new google.maps.Map(document.getElementById("map"), { 
+                zoom: 10, 
+                center: location 
+            });
+
+            // Create a marker at the specified location
+            var marker = new google.maps.Marker({
+                position: location, 
+                map: map
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+            let carousel = new bootstrap.Carousel(document.getElementById('jobSlideshow'), {
+                interval: 3000, // Slide every 3 seconds
+                ride: 'carousel'
+            });
+        }, 2000); // Delay start by 2 seconds
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+            let carousel = new bootstrap.Carousel(document.getElementById('jobSlideshow'), {
+                interval: 3000, // Slide every 3 seconds
+                ride: 'carousel'
+            });
+        }, 2000); // Delay start by 2 seconds
+    });
+
+    
+
+    function changeLanguage(lang) {
+    document.querySelectorAll("[data-en]").forEach(el => {
+        const text = el.getAttribute(lang === 'bn' ? "data-bn" : "data-en");
+        if (text) el.textContent = text; 
+    });
+}
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+            let carousel = new bootstrap.Carousel(document.getElementById('jobSlideshow'), {
+                interval: 3000, // Slide every 3 seconds
+                ride: 'carousel'
+            });
+        }, 3000); // Delay start by 2 seconds
+    });
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #map { height: 400px; width: 100%; }
+        
+         /* Adjust image height */
+        .carousel-inner img {
+            height: 500px; /* Fixed height */
+            object-fit: cover; /* Ensure images fit properly */
+        }
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <img src="logo.JPG" alt="BD Job Portal Logo" style="height: 50px;">
+        <h1 data-en="Welcome to BD Job Portal" data-bn="বিডি জব পোর্টালে স্বাগতম">Welcome to BD Job portocol</h1>
+    </header>
+   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item"><a class="nav-link" href="#" data-en="Home" data-bn="হোম">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-en="Jobs" data-bn="চাকরি">Jobs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-en="Employers" data-bn="নিয়োগকর্তা">Employers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signInModal" data-en="Sign In" data-bn="সাইন ইন">Sign In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signUpModal" data-en="Sign Up" data-bn="সাইন আপ">Sign Up</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-success text-light px-3 py-2 rounded mx-2" href="#" data-en="Post Job" data-bn="চাকরি পোস্ট করুন">Post Job</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-success px-3 py-2 rounded mx-2" href="#" data-en="Post CV" data-bn="সিভি জমা দিন">Post CV</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Language Switch Buttons -->
+            <div class="d-flex align-items-center">
+                <button class="btn btn-light ms-3" onclick="changeLanguage('en')">English</button>
+                <button class="btn btn-light ms-1" onclick="changeLanguage('bn')">বাংলা</button>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="jobSlideshow" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Career-Month-1-UM-Today-1200x802.png" class="d-block w-100 img-fluid" alt="Job Image 1">
+                <div class="carousel-caption d-none d-md-block text-center">
+                    <h5 class="fw-bold">Find Your Dream Job</h5>
+                    <p>Explore thousands of job opportunities.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="happy-freelancer-with-computer-home-young-man-sitting-armchair-using-laptop-chatting-online-smiling-vector-illustration-distance-work-online-learning-freelance_74855-8401.avif" class="d-block w-100 img-fluid" alt="Job Image 2">
+                <div class="carousel-caption d-none d-md-block text-center">
+                    <h5 class="fw-bold">Post Your CV</h5>
+                    <p>Let employers find you.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Job-Hunting-Illustration.jpg" class="d-block w-100 img-fluid" alt="Job Image 3">
+                <div class="carousel-caption d-none d-md-block text-center">
+                    <h5 class="fw-bold">Hire Top Talent</h5>
+                    <p>Post jobs and find the best candidates.</p>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#jobSlideshow" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#jobSlideshow" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+        
+
+    <!-- Sign In Modal -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInModalLabel" data-en="Sign In" data-bn="সাইন ইন">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signInEmail" class="form-label" data-en="Email" data-bn="ইমেইল">Email</label>
+                            <input type="email" class="form-control" id="signInEmail" placeholder="Enter email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signInPassword" class="form-label" data-en="Password" data-bn="পাসওয়ার্ড">Password</label>
+                            <input type="password" class="form-control" id="signInPassword" placeholder="Enter password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signUpModalLabel" data-en="Sign Up" data-bn="সাইন আপ">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signUpName" class="form-label" data-en="Full Name" data-bn="পূর্ণ নাম">Full Name</label>
+                            <input type="text" class="form-control" id="signUpName" placeholder="Enter your full name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpEmail" class="form-label" data-en="Email" data-bn="ইমেইল">Email</label>
+                            <input type="email" class="form-control" id="signUpEmail" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpPassword" class="form-label" data-en="Password" data-bn="পাসওয়ার্ড">Password</label>
+                            <input type="password" class="form-control" id="signUpPassword" placeholder="Enter your password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <main class="container my-5">
+        <section class="text-center">
+            <h2 data-en="Find Your Dream Job" data-bn="আপনার স্বপ্নের চাকরি খুঁজুন">Find Your Dream Job</h2>
+            <div class="input-group my-4">
+                <input type="text" class="form-control search-input" placeholder="Search jobs..." data-en="Search jobs..." data-bn="চাকরি অনুসন্ধান">
+                <button class="btn btn-primary search-btn" data-en="Search" data-bn="অনুসন্ধান">Search</button>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-center" data-en="Latest Job Listings" data-bn="সাম্প্রতিক চাকরির তালিকা">Latest Job Listings</h3>
+            <div class="row job-list">
+                <!-- Example Job Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        
+                        <div class="card-body">
+                            <h5 class="card-title">Software Engineer</h5>
+                            <p class="card-text">Devloper</p>
+                            <p>Apply Date: 2025-03-01</p>
+                            <p>Deadline: 2025-03-10</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example Job Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">Data Analyst</h5>
+                            <p class="card-text">Data entry officer </p>
+                            <p>Apply Date: 2025-03-02</p>
+                            <p>Deadline: 2025-03-12</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example Job Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                       
+                        <div class="card-body">
+                            <h5 class="card-title">Marketing Manager</h5>
+                            <p class="card-text"><Post->Manager</Post-></p>
+                            <p>Apply Date: 2025-03-05</p>
+                            <p>Deadline: 2025-03-15</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!--design 4-->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">ILLIYEEN</h5>
+                            <h6 class="card-title">Senior Fashion Designer</h6>
+            
+                            <p>Apply Date: 2025-03-15</p>
+                            <p>Deadline: 2025-03-20</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!--design 5-->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">Easy</h5>
+                            <p class="card-text">Selles Man</p>
+                
+                            <p>Apply Date: 2025-03-15</p>
+                            <p>Deadline: 2025-03-20</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!--design 6-->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">IUB </h5>
+                            <p class="card-text">Senior Lecture</p>
+                            <p>Apply Date: 2025-03-02</p>
+                            <p>Deadline: 2025-03-12</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">BD Train </h5>
+                            <p class="card-text">Driver</p>
+                            <p>Apply Date: 2025-03-02</p>
+                            <p>Deadline: 2025-03-12</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">Infinity </h5>
+                            <p class="card-text">Clener</p>
+                            <p>Apply Date: 2025-03-02</p>
+                            <p>Deadline: 2025-03-12</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">Bata </h5>
+                            <p class="card-text">Manager</p>
+                            <p>Apply Date: 2025-03-02</p>
+                            <p>Deadline: 2025-03-12</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">UI Designer </h5>
+                            <p class="card-text">Expert Employee</p>
+                            <p>Apply Date: 2025-03-02</p>
+                            <p>Deadline: 2025-03-12</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">IT </h5>
+                            <p class="card-text">Web stack developer</p>
+                            <p>Apply Date: 2025-03-02</p>
+                            <p>Deadline: 2025-03-12</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">Dutch Bangla Bank </h5>
+                            <p class="card-text">Accounting officer</p>
+                            <p>Apply Date: 2025-03-02</p>
+                            <p>Deadline: 2025-03-12</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">Dhaka Bank </h5>
+                            <p class="card-text">Security</p>
+                            <p>Apply Date: 2025-03-02</p>
+                            <p>Deadline: 2025-03-12</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">ABC Company </h5>
+                            <p class="card-text">Technician</p>
+                            <p>Apply Date: 2025-03-02</p>
+                            <p>Deadline: 2025-03-12</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">BRAC </h5>
+                            <p class="card-text">Lecture</p>
+                            <p>Apply Date: 2025-03-02</p>
+                            <p>Deadline: 2025-03-12</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="map" class="my-4"></section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <footer class="bg-dark text-light py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h5>About Us</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light text-decoration-none">About Bdjobs.com</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Terms & Conditions</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Accessibility Statement</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">International Partners</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Feedback</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Job Seekers</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light text-decoration-none">Create Account</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Bdjob portocol Pro</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Video CV</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">My Bdjob portocol Panel</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">List of Features</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Career Counseling</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Video Guides</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Recruiter</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light text-decoration-none">Create Account</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Products/Service</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Disability Inclusion Practice</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Post a Job</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">FAQ</a></li>
+                        </ul>
+                        <h6>Download Employer App</h6>
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png" alt="Google Play" width="120"></a>
+                        <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" width="120"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Tools & Social Media</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light text-decoration-none">Bdjob portocol Android App</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Bdjob portocol iOS App</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Facebook</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Google</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">YouTube</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">LinkedIn</a></li>
+                            <li><a href="#" class="text-light text-decoration-none">Instagram</a></li>
+                        </ul>
+                        <h6>Download Mobile App</h6>
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png" alt="Google Play" width="120"></a>
+                        <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" width="120"></a>
+                      
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <p>Need any support? Call to <span class="text-warning fw-bold">📞 01318242109</span></p>
+                    <p>Our Contact Centre is available from 9 am to 8 pm (Saturday to Thursday).</p>
+                </div>
+            </div>
+        </footer>
+        <p>&copy; 2025 BD Job Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let searchInput = document.querySelector(".search-input");
+            let searchButton = document.querySelector(".search-btn");
+    
+            function filterJobs() {
+                let searchQuery = searchInput.value.trim().toLowerCase();
+                let jobCards = document.querySelectorAll(".card");
+    
+                jobCards.forEach(card => {
+                    let jobTitle = card.querySelector(".card-title")?.innerText.toLowerCase() || "";
+                    let jobLocation = card.querySelector(".card-text")?.innerText.toLowerCase() || "";
+    
+                    if (jobTitle.includes(searchQuery) || jobLocation.includes(searchQuery)) {
+                        card.style.display = "block";  // Show matching cards
+                    } else {
+                        card.style.display = "none";   // Hide non-matching cards
+                    }
+                });
+            }
+    
+            // Search on button click
+            searchButton.addEventListener("click", filterJobs);
+    
+            // Live search while typing
+            searchInput.addEventListener("input", filterJobs);
+        });
+    </script>
+    
+</body>
+</html>
