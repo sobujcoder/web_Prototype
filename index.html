@@ -42,15 +42,15 @@
             });
         }, 2000); // Delay start by 2 seconds
     });
-
-    
-
-     function changeLanguage(lang) {
-     document.querySelectorAll("[data-en]").forEach(el => {
-        const text = el.getAttribute(lang === 'bn' ? "data-bn" : "data-en");
-        if (text) el.textContent = text; 
+    function changeLanguage(lang) {
+    document.querySelectorAll("[data-en]").forEach(el => {
+        const text = el.getAttribute(lang === "bn" ? "data-bn" : "data-en");
+        if (text) {
+            el.textContent = text;
+        }
     });
 }
+
 
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -405,6 +405,18 @@
                         <div class="card-body">
                             <h5 class="card-title">BRAC </h5>
                             <p class="card-text">Lecture</p>
+                            <p>Apply Date: 2025-03-02</p>
+                            <p>Deadline: 2025-03-12</p>
+                            <button class="btn btn-success">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                      
+                        <div class="card-body">
+                            <h5 class="card-title">Production Manager<h6>cutting,sewing, finishing </h6> </h5>
+                            <p class="card-text">Atlas Footwear Ltd.</p>
                             <p>Apply Date: 2025-03-02</p>
                             <p>Deadline: 2025-03-12</p>
                             <button class="btn btn-success">Apply Now</button>
